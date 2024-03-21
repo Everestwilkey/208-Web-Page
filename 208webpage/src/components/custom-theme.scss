@@ -1,0 +1,70 @@
+// Custom Outdoorsy Theme for React-Bootstrap with primary colors green and white
+
+// Import Bootstrap's functions and mixins
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/mixins';
+
+// Define Outdoorsy Palette
+$primary-green: #004225; // A deep, forest-like green
+$secondary-green: #006838; // A secondary, slightly lighter green
+$highlight-green: #4CAF50; // A bright green for highlights or accents
+$primary-white: #FFFFFF; // Pure white for contrast
+
+// Override Bootstrap's default variables
+$body-bg: $primary-white;
+$body-color: $primary-green;
+
+$link-color: $primary-green;
+$link-hover-color: $secondary-green;
+
+$theme-colors: (
+  'primary': $primary-green,
+  'secondary': $secondary-green,
+  'success': $highlight-green,
+  'info': $secondary-green,
+  'warning': #ffc107,
+  'danger': #dc3545,
+  'light': $primary-white,
+  'dark': $primary-green
+);
+
+// Bootstrap Navbar customization
+$navbar-dark-color: $primary-white;
+$navbar-dark-hover-color: $primary-white;
+$navbar-dark-active-color: $primary-white;
+$navbar-dark-toggler-border-color: $primary-white;
+$navbar-dark-disabled-color: lighten($primary-green, 25%);
+$navbar-dark-toggler-icon-bg: none;
+
+$navbar-light-color: $primary-green;
+$navbar-light-hover-color: darken($primary-green, 10%);
+$navbar-light-active-color: darken($primary-green, 20%);
+$navbar-light-toggler-border-color: $primary-green;
+$navbar-light-disabled-color: lighten($primary-green, 25%);
+$navbar-light-toggler-icon-bg: none;
+
+// Apply the custom styles
+.navbar {
+  background-color: $primary-green;
+  &.navbar-light {
+    .navbar-brand,
+    .nav-link {
+      color: $primary-white;
+      &:hover {
+        color: lighten($primary-white, 10%);
+      }
+    }
+  }
+}
+
+// Additional styling for Nav if needed
+.nav {
+  .nav-link {
+    &:hover {
+      background-color: $secondary-green;
+    }
+  }
+}
+
+// Import Bootstrap to apply the overrides
+@import 'bootstrap/scss/bootstrap';
