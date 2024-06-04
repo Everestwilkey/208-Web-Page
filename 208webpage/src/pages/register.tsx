@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import customFetch from '../utils/customFetch';
+
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 
 interface FormData {
